@@ -17,8 +17,8 @@
     "@open-wc/building-rollup": "^1.0.0",
     "@open-wc/eslint-config": "^4.2.0",
     "@open-wc/rollup-plugin-html": "^1.2.5",
-    "@web/dev-server": "^0.1.1",
-    "@web/dev-server-storybook": "^0.3.2",
+    "@web/dev-server": "^0.1.5",
+    "@web/dev-server-storybook": "^0.3.3",
     "deepmerge": "^4.2.2",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.11.0",
@@ -26,7 +26,8 @@
     "lint-staged": "^10.0.0",
     "prettier": "^2.0.4",
     "rimraf": "^2.6.3",
-    "rollup": "^2.37.1"
+    "rollup": "^2.37.1",
+    "rollup-plugin-multi-input": "^1.2.0"
   },
   "dependencies": {
     "lit-element": "^2.4.0",
