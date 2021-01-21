@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import '../../components/ConditionalRendering/conditional-rendering.js';
+import '../../components/ConditionalRendering/ConditionalRendering.js';
 
 class ExampleView extends LitElement {
   static get properties() {

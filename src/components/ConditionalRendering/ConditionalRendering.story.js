@@ -1,9 +1,9 @@
 import { html } from 'lit-html';
-import '../src/views/ExampleView/ExampleView.js';
+import './ConditionalRendering.js';
 
 export default {
-  title: 'Example View',
-  component: 'example-view',
+  title: 'Components',
+  component: 'conditonal-rendering',
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -11,15 +11,15 @@ export default {
 
 function Template({ title, backgroundColor }) {
   return html`
-    <example-view
+    <conditional-rendering
       style="--forms-2021-background-color: ${backgroundColor || 'white'}"
       .title=${title}
     >
-    </example-view>
+    </conditional-rendering>
   `;
 }
 
-export const Component = Template.bind({});
-Component.args = {
+export const ConditionalRendering = Template.bind({});
+ConditionalRendering.args = {
   title: 'My app',
 };
