@@ -26,7 +26,7 @@ class ConditionalRendering extends LitElement {
 
     return html`
       <div>
-        <button @click=${() => (this.showMessage = !this.showMessage)}>
+        <button @click=${() => this.toggleMessage()}>
           <!-- You can use ternary expressions for quick conditional rendering -->
           Click to ${this.showMessage ? 'hide' : 'show'} message
         </button>
@@ -40,6 +40,10 @@ class ConditionalRendering extends LitElement {
         <div>${getMessage(this.message, this.showMessage)}</div>
       </div>
     `;
+  }
+
+  toggleMessage() {
+    this.showMessage = !this.showMessage;
   }
 }
 
