@@ -1,9 +1,9 @@
 import { html } from 'lit-html';
-import '../src/forms-2021.js';
+import '../src/views/ExampleView/ExampleView.js';
 
 export default {
-  title: 'Forms2021',
-  component: 'forms-2021',
+  title: 'Example View',
+  component: 'example-view',
   argTypes: {
     backgroundColor: { control: 'color' },
   },
@@ -11,15 +11,15 @@ export default {
 
 function Template({ title, backgroundColor }) {
   return html`
-    <forms-2021
+    <example-view
       style="--forms-2021-background-color: ${backgroundColor || 'white'}"
       .title=${title}
     >
-    </forms-2021>
+    </example-view>
   `;
 }
 
-export const App = Template.bind({});
-App.args = {
+export const Component = Template.bind({});
+Component.args = {
   title: 'My app',
 };

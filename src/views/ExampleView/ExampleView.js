@@ -1,7 +1,7 @@
 import { LitElement, html, css } from 'lit-element';
-import '../components/ConditionalRendering/conditional-rendering.js';
+import '../../components/ConditionalRendering/conditional-rendering.js';
 
-class Forms2021 extends LitElement {
+class ExampleView extends LitElement {
   static get properties() {
     return {
       title: { type: String },
@@ -67,4 +67,4 @@ class Forms2021 extends LitElement {
   }
 }
 
-customElements.define('forms-2021', Forms2021);
+customElements.define('example-view', ExampleView);
