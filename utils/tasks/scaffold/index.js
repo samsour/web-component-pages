@@ -2,7 +2,7 @@ const prompts = require('prompts');
 const path = require('path');
 const fs = require('fs');
 
-const componentPrefix = 'syz';
+const componentPrefix = 'wcp';
 
 String.prototype.interpolate = function (params) {
   const names = Object.keys(params);
