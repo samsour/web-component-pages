@@ -1,18 +1,18 @@
 {
-  "scripts": {
-    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
-    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
-    "storybook": "web-dev-server -c .storybook/server.mjs",
-    "storybook:build": "build-storybook",
-    "build": "rimraf dist && rollup -c rollup.config.js",
-    "start:build": "npm run build && web-dev-server --root-dir dist --app-index index.html --open --compatibility none",
-    "start": "web-dev-server"
-  },
-  "name": "forms-2021",
-  "version": "0.0.0",
-  "description": "Webcomponent forms-2021 following open-wc recommendations",
-  "author": "forms-2021",
+  "name": "web-component-pages",
+  "version": "1.0.0",
+  "description": "Web component based stack for reusable componentes and microsites.",
+  "author": "Sam Sauer",
   "license": "MIT",
+  "scripts": {
+    "start": "npm run storybook",
+    "build": "node utils/tasks/build",
+    "storybook": "web-dev-server -c .storybook/server.mjs",
+    "build:storybook": "rimraf dist && build-storybook -o dist",
+    "scaffold": "node utils/tasks/scaffold && npm run start",
+    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore"
+  },
   "devDependencies": {
     "@open-wc/building-rollup": "^1.0.0",
     "@open-wc/eslint-config": "^4.2.0",
@@ -22,9 +22,8 @@
     "deepmerge": "^4.2.2",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.11.0",
-    "husky": "^1.0.0",
-    "lint-staged": "^10.0.0",
     "prettier": "^2.0.4",
+    "prompts": "^2.4.0",
     "rimraf": "^2.6.3",
     "rollup": "^2.37.1",
     "rollup-plugin-multi-input": "^1.2.0"
@@ -42,17 +41,5 @@
   "prettier": {
     "singleQuote": true,
     "arrowParens": "avoid"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write",
-      "git add"
-    ]
   }
 }
